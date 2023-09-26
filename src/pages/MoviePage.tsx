@@ -11,17 +11,11 @@ const MoviePage = () => {
 
   useEffect(() => {
     const fetchMovie = async () => {
-      try {
-        const result = await fetch({
-          type: 'details',
-          movie_id: movieId,
-        });
-        setMovie(result as MovieData);
-      } catch (error) {
-        console.log(0);
-      } finally {
-        console.log(1);
-      }
+      const result = await fetch({
+        type: 'details',
+        movie_id: movieId,
+      });
+      setMovie(result as MovieData);
     };
     fetchMovie();
   }, []);
