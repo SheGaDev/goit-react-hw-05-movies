@@ -18,7 +18,7 @@ const ins = axios.create({
 });
 const routes = {
   trending: () => 'trending/movie/day',
-  search: ({ query }: FetchTMDB) => `search/movies?query=${query}`,
+  search: ({ query }: FetchTMDB) => `search/movie?query=${query}`,
   details: ({ movie_id }: FetchTMDB) => `movie/${movie_id}`,
   credits: ({ movie_id }: FetchTMDB) => `movie/${movie_id}/credits`,
   reviews: ({ movie_id }: FetchTMDB) => `movie/${movie_id}/reviews`,

@@ -112,7 +112,7 @@ export type SearchMovies = {
 export type SearchMoviesData = {
   results: SearchMovies[];
 };
-type Cast = {
+export type Cast = {
   adult: boolean;
   gender: number;
   id: number;
