@@ -5,7 +5,7 @@ import NotFoundPage from '../pages/404';
 
 const HomePage = lazy(() => import('../pages/HomePage'));
 const MoviesPage = lazy(() => import('../pages/MoviesPage'));
-const MoviePage = lazy(() => import('../pages/MoviePage'));
+const InfoMoviePage = lazy(() => import('../pages/InfoMoviePage'));
 const CastPage = lazy(() => import('../pages/CastPage'));
 const ReviewsPage = lazy(() => import('../pages/ReviewsPage'));
 
@@ -15,7 +15,7 @@ function App() {
       <Route path='/goit-react-hw-05-movies/' element={<Layout />}>
         <Route index element={<HomePage />} />
         <Route path='movies' element={<MoviesPage />} />
-        <Route path='movie/:movieId' element={<MoviePage />}>
+        <Route path='movie/:movieId' element={<InfoMoviePage />}>
           <Route path='cast' element={<CastPage />} />
           <Route path='reviews' element={<ReviewsPage />} />
         </Route>

@@ -7,7 +7,9 @@ const Movie = ({ movie }: { movie: MovieData }) => {
   const location = useRef(useLocation().state?.from ?? '/goit-react-hw-05-movies');
 
   const fullPathPoster = (poster: string): string =>
-    poster && `https://image.tmdb.org/t/p/w260_and_h390_face${poster}`;
+    poster
+      ? `https://image.tmdb.org/t/p/w260_and_h390_face${poster}`
+      : 'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700';
   return (
     <>
       <Link to={location.current}>
