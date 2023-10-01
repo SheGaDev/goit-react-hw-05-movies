@@ -8,7 +8,7 @@ const MoviesList = ({ movies }: { movies: SearchMovies[] | TrendingDataResults[]
       {movies.map((movie) => {
         return (
           <li key={movie.id}>
-            <Link to={`/goit-react-hw-05-movies/movie/${movie.id}`} state={{ from: location }}>
+            <Link to={`/movie/${movie.id}`} state={{ from: location }}>
               {movie.title}
             </Link>
           </li>

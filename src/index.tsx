@@ -6,7 +6,7 @@ import './global.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename='/goit-react-hw-05-movies'>
     <App />
   </BrowserRouter>
 );
